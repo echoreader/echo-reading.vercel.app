@@ -1,4 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    title: "EchoReader",
+    description: "Modular. Reech. Powerful.",
+    siteUrl: "https://echo-reading.vercel.app", // ← wajib untuk sitemap
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
