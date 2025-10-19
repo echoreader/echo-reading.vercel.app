@@ -6,22 +6,20 @@ export default function AboutPage() {
   return (
     <Layout>
       <SEO
-        title="Tentang EchoReader"
-        description="Profil EchoReader — digital creator, SEO specialist, dan arsitek blog modular."
+        title="Echo Reader — Modular Architect & SEO-Driven Blog Strategist"
+        description="Discover Echo Reader’s mission to build scalable, niche blog ecosystems with modular design and strategic SEO."
         pageType="about"
       />
       <section className="container">
-        <h1>About EchoReader</h1>
+        <h1>About Echo Reader</h1>
         <p>
-          EchoReader is a digital creator and SEO specialist focused on meaningful writing and modular blog architecture.
+EchoReader is a modular architect and digital strategist focused on building scalable, SEO-optimized blog ecosystems.
+This site serves as a strategic backlink hub, amplifying niche content in business, finance, careers, and education.
+</p>
 
-        </p>
-        <p>
-          This blog connects readers with niche blogs that cover coding experiments, API troubleshooting, and strategic storytelling.
-        </p>
-        <p>
-          Topics covered include lifestyle, travel, and batchable logic for static web development..
-        </p>
+<p>
+With a passion for clean UI/UX, defensive SEO, and batchable architecture
+</p>
       </section>
     </Layout>
   );

@@ -6,14 +6,15 @@ export default function HomePage() {
   return (
     <Layout>
       <SEO
-        title="EchoReader — Modular. Receh. Powerful."
-        description="EchoReader adalah blog modular yang membahas eksperimen, receh coding, dan batchable logic."
+        title="Echo Reader — Strategic Backlink Hub for Business & Education."
+        description="Echo Reader connects niche blogs in finance and education, boosting visibility for Investify Guide and Hustle Crafted."
         pageType="home"
       />
       <section className="container">
         <h1>Welcome to EchoReader</h1>
-        <p>Modular. Receh. Powerful.</p>
-        <p>This blog covers coding experiments, API troubleshooting, and batchable architectures.</p>
+        <p>
+EchoReader is a strategic backlink hub connecting niche blogs in business, finance, careers, and education.
+</p>
       </section>
     </Layout>
   );

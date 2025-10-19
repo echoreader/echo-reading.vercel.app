@@ -25,8 +25,8 @@ export default function BlogPage({ data }) {
   return (
     <Layout>
       <SEO
-        title="Blog — EchoReader"
-        description="Kumpulan artikel receh dan eksperimen modular dari EchoReader."
+        title="Echo Reader Bloglist — Curated Backlinks to Finance & Education"
+        description="Explore Echo Reader’s curated bloglist linking to niche content in finance, careers, and lifelong learning."
         pageType="blog"
       />
       <section className="container">

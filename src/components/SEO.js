@@ -11,6 +11,7 @@ export default function SEO({ title, description, pageType, slug }) {
       <meta name="description" content={description} />
       <link rel="canonical" href={`https://echo-reading.vercel.app/${slug || ""}`} />
       <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </Helmet>
   );
 }

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "EchoReader",
+    title: "Echo Reader",
     description: "Modular. Reech. Powerful.",
     siteUrl: "https://echo-reading.vercel.app", // ← wajib untuk sitemap
   },
