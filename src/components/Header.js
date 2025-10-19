@@ -11,7 +11,7 @@ export default function Header() {
         {/* Branding di kiri */}
         <div className="brand">
           <h1 className="site-title">
-            <Link to="/">EchoReader</Link>
+            <Link to="/">Echo Reader</Link>
           </h1>
         </div>
 

@@ -11,9 +11,9 @@ export default function HomePage() {
         pageType="home"
       />
       <section className="container">
-        <h1>Welcome to EchoReader</h1>
+        <h1>Welcome to Echo Reader</h1>
         <p>
-EchoReader is a strategic backlink hub connecting niche blogs in business, finance, careers, and education.
+Echo Reader is a strategic backlink hub connecting niche blogs in business, finance, careers, and education.
 </p>
       </section>
     </Layout>

@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section className="container">
         <h1>About Echo Reader</h1>
         <p>
-EchoReader is a modular architect and digital strategist focused on building scalable, SEO-optimized blog ecosystems.
+Echo Reader is a modular architect and digital strategist focused on building scalable, SEO-optimized blog ecosystems.
 This site serves as a strategic backlink hub, amplifying niche content in business, finance, careers, and education.
 </p>
 
