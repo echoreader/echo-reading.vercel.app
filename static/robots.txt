@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://echo-reading.vercel.app/sitemap-index.xml
+Host: https://echo-reading.vercel.app/
