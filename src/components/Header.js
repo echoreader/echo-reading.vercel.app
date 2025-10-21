@@ -6,29 +6,40 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="site-header sticky-header">
-      <div className="container header-flex">
-        {/* Branding di kiri */}
-        <div className="brand">
-          <h1 className="site-title">
-            <Link to="/">Echo Reader</Link>
-          </h1>
-        </div>
+    <header className="site-header" role="banner">
+      <div className="container">
+        <nav className="navbar" role="navigation" aria-label="Main navigation">
+          {/* Branding */}
+          <div className="nav-brand">
+            <Link to="/" className="brand" itemProp="url">
+              Echo Reader
+            </Link>
+          </div>
 
-        {/* Hamburger di kanan */}
-        <button
-          className="menu-toggle"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          ☰
-        </button>
+          {/* Hamburger */}
+          <button
+            className="nav-toggle"
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-        {/* Menu navigasi */}
-        <nav className={`site-nav ${menuOpen ? "open" : ""}`}>
-          <Link to="/">Home</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/about">About</Link>
+          {/* Menu */}
+          <ul className={`nav-menu ${menuOpen ? "active" : ""}`} role="menubar">
+            <li role="none">
+              <Link to="/" className="nav-link" role="menuitem">Home</Link>
+            </li>
+            <li role="none">
+              <Link to="/blog" className="nav-link" role="menuitem">Blog</Link>
+            </li>
+            <li role="none">
+              <Link to="/about" className="nav-link" role="menuitem">About</Link>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>

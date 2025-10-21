@@ -1,6 +1,10 @@
-/* ===========================
-   RESET & BASE STYLES
-=========================== */
+/* ====================================
+   1. RESET & BASE STYLES
+==================================== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Inter", system-ui, sans-serif;
@@ -18,18 +22,18 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===========================
-   CONTAINER
-=========================== */
+/* ====================================
+   2. CONTAINER
+==================================== */
 .container {
   max-width: 960px;
   margin: auto;
   padding: 2rem 1.5rem;
 }
 
-/* ===========================
-   HEADER (DESKTOP & MOBILE)
-=========================== */
+/* ====================================
+   3. HEADER (DESKTOP FIRST)
+==================================== */
 .site-header {
   position: sticky;
   top: 0;
@@ -38,90 +42,65 @@ a:hover {
   border-bottom: 1px solid #eaeaea;
 }
 
-/* Flex layout for header */
-.header-flex {
+.navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 1rem 0;
-  gap: 1rem;
 }
 
-/* Branding */
-.site-title {
+.nav-brand .brand {
   font-size: 1.6rem;
   font-weight: 700;
   color: #7c3aed;
-  margin: 0;
+  text-decoration: none;
 }
 
-.site-title a {
-  color: inherit;
-}
-
-/* Navigation (desktop) */
-.site-nav {
+.nav-menu {
   display: flex;
   gap: 2rem;
-  font-size: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.site-nav a {
+.nav-link {
   font-weight: 500;
   color: #555;
+  text-decoration: none;
 }
 
-.site-nav a:hover {
+.nav-link:hover {
   color: #7c3aed;
 }
 
-/* Hamburger toggle (mobile only) */
-.menu-toggle {
+.nav-toggle {
   display: none;
-  font-size: 1.5rem;
+  flex-direction: column;
+  gap: 4px;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-/* ===========================
-   MOBILE STYLES
-=========================== */
-@media (max-width: 600px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .site-nav {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-    width: 100%;
-  }
-
-  .site-nav.open {
-    display: flex;
-  }
-
-  .header-flex {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
 }
 
-/* ===========================
-   MAIN CONTENT
-=========================== */
+/* ====================================
+   4. MAIN CONTENT
+==================================== */
 main {
   padding: 2rem 1.5rem;
 }
 
-/* ===========================
-   BLOG POST CARD
-=========================== */
+/* ====================================
+   5. BLOG POST CARD
+==================================== */
 .post-card {
   border: 1px solid #eaeaea;
   padding: 1.5rem;
@@ -147,14 +126,51 @@ main {
   color: #444;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+/* ====================================
+   6. FOOTER
+==================================== */
 .site-footer {
   background: #f9f9f9;
   color: #555;
-  text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
   border-top: 1px solid #eaeaea;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+/* ====================================
+   7. MOBILE RESPONSIVE (≤768px)
+==================================== */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-link {
+    color: #333;
+    font-weight: 500;
+  }
 }

@@ -4,6 +4,7 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container">
+        <div class="footer-bottom">
         <p>&copy; 2025 Echo Reader — All rights reserved.</p>
         <p>
           <a href="https://investifyguide.blogspot.com/" target="_blank">
@@ -14,6 +15,7 @@ export default function Footer() {
             Hustle Crafted
           </a>
         </p>
+      </div>
       </div>
     </footer>
   );
