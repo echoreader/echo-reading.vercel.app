@@ -32,16 +32,16 @@ export default function BlogPage({ data }) {
       <section className="container">
         <h1>Blog</h1>
         {posts.map(post => (
-  <div key={post.id} className="post-card">
-    <h2>
-      <Link to={`/${post.frontmatter.slug}`}>
-        {post.frontmatter.title}
-      </Link>
-    </h2>
-    <p><em>{post.frontmatter.date}</em></p>
-    <p>{post.frontmatter.description}</p>
-  </div>
-))}
+        <div key={post.id} className="post-card">
+          <h2>
+            <Link to={`/${post.frontmatter.slug}`}>
+              {post.frontmatter.title}
+            </Link>
+          </h2>
+          <p><em>{post.frontmatter.date}</em></p>
+          <p>{post.frontmatter.description}</p>
+        </div>
+      ))}
 
       </section>
     </Layout>

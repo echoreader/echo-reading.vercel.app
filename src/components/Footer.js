@@ -7,11 +7,11 @@ export default function Footer() {
         <div class="footer-bottom">
         <p>&copy; 2025 Wealthhustle — All rights reserved.</p>
         <p>
-          <a href="https://investifyguide.blogspot.com/" target="_blank">
+          <a href="https://investifyguide.blogspot.com/" rel="nofollow noopener" target="_blank">
             Investify Guide
           </a>
           <br />
-          <a href="https://hustlecrafted.blogspot.com/" target="_blank">
+          <a href="https://hustlecrafted.blogspot.com/" rel="nofollow noopener" target="_blank">
             Hustle Crafted
           </a>
         </p>

@@ -17,7 +17,6 @@ export const query = graphql`
   }
 `;
 
-
 export default function PostTemplate({ data }) {
   const post = data.markdownRemark;
 
