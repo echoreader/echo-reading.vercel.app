@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Echo Reader",
+    title: "Wealthhustle",
     description: "Modular. Reech. Powerful.",
-    siteUrl: "https://echo-reading.vercel.app", // ← wajib untuk sitemap
+    siteUrl: "https://wealthhustle.blog", // ← wajib untuk sitemap
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,3 +17,4 @@ module.exports = {
     `gatsby-transformer-remark`,
   ],
 };
+//echo-reading.vercel.app > wealthhustle.blog

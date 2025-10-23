@@ -6,20 +6,17 @@ export default function AboutPage() {
   return (
     <Layout>
       <SEO
-        title="Echo Reader — Modular Architect & SEO-Driven Blog Strategist"
-        description="Discover Echo Reader’s mission to build scalable, niche blog ecosystems with modular design and strategic SEO."
+        title="About WealthHustle — Empowering Financial Growth & Career Mastery"
+        description="WealthHustle is built for ambitious minds seeking financial clarity and career momentum. We combine smart investing, budgeting strategies, productivity tools, and lifelong learning to help you grow wealth and craft your hustle with purpose."
         pageType="about"
       />
       <section className="container">
-        <h1>About Echo Reader</h1>
-        <p>
-Echo Reader is a modular architect and digital strategist focused on building scalable, SEO-optimized blog ecosystems.
-This site serves as a strategic backlink hub, amplifying niche content in business, finance, careers, and education.
-</p>
-
-<p>
-With a passion for clean UI/UX, defensive SEO, and batchable architecture
-</p>
+        <h1>About WealthHustle</h1>
+        <p>WealthHustle is built for ambitious minds seeking financial clarity and career momentum. We blend smart investing, budgeting strategies, productivity tools, and lifelong learning to help you grow wealth and craft your hustle with purpose.</p>
+        <p>This blog is curated by Echo Reader — a modular content studio exploring niche storytelling across independent domains. 
+          <br/>
+          <a href="https://echoreader.blog" rel="nofollow noopener" target="_blank">Echo Reader</a>.
+        </p>
       </section>
     </Layout>
   );

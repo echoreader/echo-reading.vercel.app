@@ -6,15 +6,13 @@ export default function HomePage() {
   return (
     <Layout>
       <SEO
-        title="Echo Reader — Strategic Backlink Hub for Business & Education."
-        description="Echo Reader connects niche blogs in finance and education, boosting visibility for Investify Guide and Hustle Crafted."
+        title="WealthHustle Blog — Smart Finance & Career Growth for Ambitious Professionals"
+        description="Welcome to WealthHustle, your guide to financial empowerment and lifelong career success. Explore smart money strategies, market insights, productivity tools, and career advice tailored for modern professionals who hustle with purpose."
         pageType="home"
       />
       <section className="container">
-        <h1>Welcome to Echo Reader</h1>
-        <p>
-Echo Reader is a strategic backlink hub connecting niche blogs in business, finance, careers, and education.
-</p>
+        <h1>Grow Wealth, Craft Hustle — Smarter Moves Start Here</h1>
+        <p>WealthHustle is your guide to financial clarity and career momentum. Explore smart investing, budgeting strategies, productivity tools, and lifelong learning insights designed for ambitious professionals who hustle with purpose.</p>
       </section>
     </Layout>
   );

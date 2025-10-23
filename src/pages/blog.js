@@ -25,8 +25,8 @@ export default function BlogPage({ data }) {
   return (
     <Layout>
       <SEO
-        title="Echo Reader Bloglist — Curated Backlinks to Finance & Education"
-        description="Explore Echo Reader’s curated bloglist linking to niche content in finance, careers, and lifelong learning."
+        title="WealthHustle Articles — Finance Tips, Career Advice & Productivity Insights for Driven Professionals"
+        description="Browse WealthHustle curated articles on smart investing, career growth, budgeting, and productivity. Whether you're climbing the corporate ladder or building your own path, our insights help you hustle smarter and grow stronger."
         pageType="blog"
       />
       <section className="container">

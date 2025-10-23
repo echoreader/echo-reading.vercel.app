@@ -5,7 +5,7 @@ import generateSchema from "../utils/schema";
 
 export default function SEO({ title, description, pageType }) {
   const location = useLocation();
-  const canonicalUrl = `https://echo-reading.vercel.app${location.pathname}`;
+  const canonicalUrl = `https://wealthhustle.blog${location.pathname}`;
   const schema = generateSchema({ pageType, title, description, slug: location.pathname });
 
   return (

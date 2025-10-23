@@ -1,12 +1,12 @@
 export default function generateSchema({ pageType, title, description, slug }) {
-  const baseUrl = "https://echo-reading.vercel.app";
+  const baseUrl = "https://wealthhustle.blog";
 
   switch (pageType) {
     case "home":
       return {
         "@context": "https://schema.org",
         "@type": "Organization",
-        name: "EchoReader",
+        name: "Echo Reader",
         url: baseUrl,
         description,
         logo: `${baseUrl}/favicon.png`,
@@ -48,7 +48,7 @@ export default function generateSchema({ pageType, title, description, slug }) {
       return {
         "@context": "https://schema.org",
         "@type": "Person",
-        name: "Echo",
+        name: "Echo Reader",
         url: `${baseUrl}/about`,
         description,
         sameAs: ["https://github.com/echoreader", "https://twitter.com/echoreader"],

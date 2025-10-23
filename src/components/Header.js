@@ -12,7 +12,7 @@ export default function Header() {
           {/* Branding */}
           <div className="nav-brand">
             <Link to="/" className="brand" itemProp="url">
-              Echo Reader
+              Wealthhustle
             </Link>
           </div>
 
