@@ -5,6 +5,11 @@ import SEO from "../components/SEO";
 
 export const query = graphql`
   {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
         frontmatter {
@@ -21,6 +26,7 @@ export const query = graphql`
 
 export default function BlogPage({ data }) {
   const posts = data.allMarkdownRemark.nodes;
+  const siteUrl = data.site.siteMetadata.siteUrl; // ← ambil dari page query, bukan useStaticQuery
 
   return (
     <Layout>
@@ -32,17 +38,16 @@ export default function BlogPage({ data }) {
       <section className="container">
         <h1>Blog</h1>
         {posts.map(post => (
-        <div key={post.id} className="post-card">
-          <h2>
-            <Link to={`https://wealthhustle.blog/${post.frontmatter.slug}`}>
-              {post.frontmatter.title}
-            </Link>
-          </h2>
-          <p><em>{post.frontmatter.date}</em></p>
-          <p>{post.frontmatter.description}</p>
-        </div>
-      ))}
-
+          <div key={post.id} className="post-card">
+            <h2>
+              <Link to={`${siteUrl}/${post.frontmatter.slug}`}>
+                {post.frontmatter.title}
+              </Link>
+            </h2>
+            <p><em>{post.frontmatter.date}</em></p>
+            <p>{post.frontmatter.description}</p>
+          </div>
+        ))}
       </section>
     </Layout>
   );

@@ -1,9 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
+//import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby"; // ← ditambah: ambil siteUrl
 import "../styles/global.css";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // ← ditambah: ambil siteUrl dari gatsby-config.js
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+    }
+  `);
+  const siteUrl = site.siteMetadata.siteUrl;
 
   return (
     <header className="site-header" role="banner">
@@ -11,7 +24,8 @@ export default function Header() {
         <nav className="navbar" role="navigation" aria-label="Main navigation">
           {/* Branding */}
           <div className="nav-brand">
-            <Link to="https://wealthhustle.blog/" className="brand" itemProp="url">
+            {/* <Link to="https://wealthhustle.blog/" className="brand" itemProp="url">*/}
+            <Link to={`${siteUrl}/`} className="brand" itemProp="url"> {/* ← ditambah: dynamic domain */}  
               Wealthhustle
             </Link>
           </div>
@@ -34,10 +48,14 @@ export default function Header() {
               <Link to="/" className="nav-link" role="menuitem">Home</Link>
             </li>*/}
             <li role="none">
-              <Link to="https://wealthhustle.blog/blog" className="nav-link" role="menuitem">Blog</Link>
+              <Link to={`${siteUrl}/blog`} className="nav-link" role="menuitem"> {/* ← ditambah: dynamic domain */}
+                Blog
+              </Link>
             </li>
             <li role="none">
-              <Link to="https://wealthhustle.blog/about" className="nav-link" role="menuitem">About</Link>
+              <Link to={`${siteUrl}/about`} className="nav-link" role="menuitem"> {/* ← ditambah: dynamic domain */}
+                About
+              </Link>
             </li>
           </ul>
         </nav>
