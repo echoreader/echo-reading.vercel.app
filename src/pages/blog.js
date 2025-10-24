@@ -34,7 +34,7 @@ export default function BlogPage({ data }) {
         {posts.map(post => (
         <div key={post.id} className="post-card">
           <h2>
-            <Link to={`/${post.frontmatter.slug}`}>
+            <Link to={`https://wealthhustle.blog/${post.frontmatter.slug}`}>
               {post.frontmatter.title}
             </Link>
           </h2>

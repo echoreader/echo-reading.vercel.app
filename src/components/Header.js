@@ -11,7 +11,7 @@ export default function Header() {
         <nav className="navbar" role="navigation" aria-label="Main navigation">
           {/* Branding */}
           <div className="nav-brand">
-            <Link to="/" className="brand" itemProp="url">
+            <Link to="https://wealthhustle.blog/" className="brand" itemProp="url">
               Wealthhustle
             </Link>
           </div>
@@ -23,21 +23,21 @@ export default function Header() {
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <span></span>
+            {/*<span></span>*/}
             <span></span>
             <span></span>
           </button>
 
           {/* Menu */}
           <ul className={`nav-menu ${menuOpen ? "active" : ""}`} role="menubar">
-            <li role="none">
+            {/* <li role="none">
               <Link to="/" className="nav-link" role="menuitem">Home</Link>
+            </li>*/}
+            <li role="none">
+              <Link to="https://wealthhustle.blog/blog" className="nav-link" role="menuitem">Blog</Link>
             </li>
             <li role="none">
-              <Link to="/blog" className="nav-link" role="menuitem">Blog</Link>
-            </li>
-            <li role="none">
-              <Link to="/about" className="nav-link" role="menuitem">About</Link>
+              <Link to="https://wealthhustle.blog/about" className="nav-link" role="menuitem">About</Link>
             </li>
           </ul>
         </nav>
