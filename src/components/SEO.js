@@ -15,6 +15,21 @@ export default function SEO({ title, description, pageType }) {
       <link rel="canonical" href={canonicalUrl} />
       <script type="application/ld+json">{JSON.stringify(schema)}</script>
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <script type="text/javascript">
+    {`
+      if (window.location.search.includes("no-track")) {
+        localStorage.setItem("skipAnalytics", "true");
+      }
+
+      if (localStorage.getItem("skipAnalytics") !== "true") {
+        const cfScript = document.createElement("script");
+        cfScript.defer = true;
+        cfScript.src = "https://static.cloudflareinsights.com/beacon.min.js";
+        cfScript.setAttribute("data-cf-beacon", '{"token": "7409e335e20240efa07f1bd360e11f9f"}');
+        document.head.appendChild(cfScript);
+      }
+    `}
+  </script>
     </Helmet>
   );
 }
