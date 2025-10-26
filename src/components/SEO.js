@@ -12,6 +12,7 @@ export default function SEO({ title, description, pageType }) {
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="robots" content="index, follow"/>
       <link rel="canonical" href={canonicalUrl} />
       <script type="application/ld+json">{JSON.stringify(schema)}</script>
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
