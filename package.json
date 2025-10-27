@@ -29,13 +29,16 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build  && npm run generate-sitemap",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "generate-sitemap": "npm run generate-sitemap-post && npm run generate-sitemap-page",
+    "generate-sitemap-post": "node scripts/generate-sitemap-post.js",
+    "generate-sitemap-page": "node scripts/generate-sitemap-page.js"
   },
   "repository": {
     "type": "git",
