@@ -40,7 +40,7 @@ export default function BlogPage({ data }) {
         {posts.map(post => (
           <div key={post.id} className="post-card">
             <h2>
-              <Link to={`/${post.frontmatter.slug}`}>
+              <Link to={`${siteUrl}/${post.frontmatter.slug}`}>
     {post.frontmatter.title}
   </Link>
             </h2>
