@@ -21,15 +21,15 @@ export default function Footer() {
         <div class="footer-bottom">
         <p>&copy; 2025 Wealthhustle — All rights reserved.</p>
         <p>          
-          <a href={`${siteUrl}/contact`}>
+          <a href={`${siteUrl}/contact/`}>
             Contact
           </a>
           <br />
-          <a href={`${siteUrl}/disclaimer`}>
+          <a href={`${siteUrl}/disclaimer/`}>
             Disclaimer
           </a>
           <br />
-          <a href={`${siteUrl}/privacy-policy`}>
+          <a href={`${siteUrl}/privacy-policy/`}>
             Privacy Policy
           </a>
         </p>

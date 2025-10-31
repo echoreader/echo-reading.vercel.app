@@ -7,7 +7,7 @@ export default function AboutPage() {
     <Layout>
       <SEO
         title="About WealthHustle — Empowering Financial Growth & Career Mastery"
-        description="WealthHustle is built for ambitious minds seeking financial clarity and career momentum. We combine smart investing, budgeting strategies, productivity tools, and lifelong learning to help you grow wealth and craft your hustle with purpose."
+        description="WealthHustle is built for ambitious minds seeking financial clarity and career momentum. We combine smart investing, budgeting strategies."
         pageType="about"
       />
       <section className="container">

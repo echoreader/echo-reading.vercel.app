@@ -7,7 +7,7 @@ export default function HomePage() {
     <Layout>
       <SEO
         title="WealthHustle Blog — Smart Finance & Career Growth for Ambitious Professionals"
-        description="Welcome to WealthHustle, your guide to financial empowerment and lifelong career success. Explore smart money strategies, market insights, productivity tools, and career advice tailored for modern professionals who hustle with purpose."
+        description="Welcome to WealthHustle, your guide to financial empowerment and lifelong career success. Explore smart money strategies, market insights."
         pageType="home"
       />
       <section className="container">

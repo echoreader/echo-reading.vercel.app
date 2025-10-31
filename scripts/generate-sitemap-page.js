@@ -7,8 +7,11 @@ const OUTPUT_PATH = path.join(__dirname, "../static/sitemap-page.xml");
 // ✅ Daftar halaman statis — bisa kamu tambah sesuai kebutuhan
 const staticPages = [
   { path: "/", priority: 1.0 },
-  { path: "/about", priority: 0.6 },
-  { path: "/blog", priority: 0.7 },
+  { path: "/blog/", priority: 0.7 },
+  { path: "/about/", priority: 0.7 },
+  { path: "/contact/", priority: 0.7 },
+  { path: "/disclaimer/", priority: 0.7 },
+  { path: "/privacy-policy/", priority: 0.7 },
 ];
 
 const today = new Date().toISOString();

@@ -48,12 +48,12 @@ export default function Header() {
               <Link to="/" className="nav-link" role="menuitem">Home</Link>
             </li>*/}
             <li role="none">
-              <Link to={`${siteUrl}/blog`} className="nav-link" role="menuitem"> {/* ← ditambah: dynamic domain */}
+              <Link to={`${siteUrl}/blog/`} className="nav-link" role="menuitem"> {/* ← ditambah: dynamic domain */}
                 Blog
               </Link>
             </li>
             <li role="none">
-              <Link to={`${siteUrl}/about`} className="nav-link" role="menuitem"> {/* ← ditambah: dynamic domain */}
+              <Link to={`${siteUrl}/about/`} className="nav-link" role="menuitem"> {/* ← ditambah: dynamic domain */}
                 About
               </Link>
             </li>

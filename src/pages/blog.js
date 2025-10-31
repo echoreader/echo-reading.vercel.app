@@ -31,8 +31,8 @@ export default function BlogPage({ data }) {
   return (
     <Layout>
       <SEO
-        title="WealthHustle Articles — Finance Tips, Career Advice & Productivity Insights for Driven Professionals"
-        description="Browse WealthHustle curated articles on smart investing, career growth, budgeting, and productivity. Whether you're climbing the corporate ladder or building your own path, our insights help you hustle smarter and grow stronger."
+        title="WealthHustle Articles — Finance Tips, Career Advice & Productivity Insights"
+        description="Browse WealthHustle curated articles on smart investing, career growth, budgeting, and productivity."
         pageType="blog"
       />
       <section className="container">
