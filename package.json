@@ -1,9 +1,19 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "wealthhustle-blog",
+  "version": "1.0.0",
+  "description": "Static blog for wealthhustle.blog built with Gatsby",
+  "author": "Echo Reader",
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build && npm run generate-sitemap",
+    "preview": "gatsby serve",
+    "start": "npm run dev",
+    "clean": "gatsby clean",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "generate-sitemap": "npm run generate-sitemap-post && npm run generate-sitemap-page",
+    "generate-sitemap-post": "node scripts/generate-sitemap-post.js",
+    "generate-sitemap-page": "node scripts/generate-sitemap-page.js"
+  },
   "dependencies": {
     "@mdx-js/mdx": "^3.1.1",
     "@mdx-js/react": "^2.3.0",
@@ -24,27 +34,13 @@
   "devDependencies": {
     "prettier": "^2.8.8"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
-  "scripts": {
-    "build": "gatsby build  && npm run generate-sitemap",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "generate-sitemap": "npm run generate-sitemap-post && npm run generate-sitemap-page",
-    "generate-sitemap-post": "node scripts/generate-sitemap-post.js",
-    "generate-sitemap-page": "node scripts/generate-sitemap-page.js"
-  },
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/echoreader/wealthhustle.blog"
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }
