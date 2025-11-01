@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useStaticQuery, graphql } from "gatsby"; // ← ditambah: ambil siteUrl
 import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
@@ -30,7 +30,7 @@ export default function SEO({ title, description, pageType }) {
       document.head.appendChild(script);
     }, []);
   }
-  
+
   return (
     <Helmet>
       {/* 1. SEO meta */}
