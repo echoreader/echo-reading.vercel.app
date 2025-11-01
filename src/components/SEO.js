@@ -20,6 +20,15 @@ export default function SEO({ title, description, pageType }) {
   const canonicalUrl = `${site.siteMetadata.siteUrl}${location.pathname}`;
   const schema = generateSchema({ pageType, title, description, slug: location.pathname });
 
+   // ✅ Inject AdSense script via useEffect
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-6771362188294710";
+    script.crossOrigin = "anonymous";
+    document.head.appendChild(script);
+  }, []);
+
   return (
     <Helmet>
       {/* 1. SEO meta */}
@@ -31,17 +40,10 @@ export default function SEO({ title, description, pageType }) {
       {/* 2. Structured data */}
       <script type="application/ld+json">{JSON.stringify(schema)}</script>
 
-      {/* 3. Google AdSense Script */}
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-6771362188294710"
-        crossOrigin="anonymous"
-      ></script>
-
-      {/* 4. Favicon */}
+      {/* 3. Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-      {/* 5. Cloudflare beacon script */}
+      {/* 4. Cloudflare beacon script */}
       <script type="text/javascript">
         {`
           if (window.location.search.includes("no-track")) {
