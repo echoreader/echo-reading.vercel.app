@@ -1,36 +1,62 @@
 import React from "react";
+import { Link, useStaticQuery, graphql } from "gatsby"; // ← ditambah: ambil siteUrl
 import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
 import generateSchema from "../utils/schema";
 
 export default function SEO({ title, description, pageType }) {
+
+  const { site } = useStaticQuery(graphql`
+  query {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+  }
+`);
+
   const location = useLocation();
-  const canonicalUrl = `https://wealthhustle.blog${location.pathname}`;
+  const canonicalUrl = `${site.siteMetadata.siteUrl}${location.pathname}`;
   const schema = generateSchema({ pageType, title, description, slug: location.pathname });
 
   return (
     <Helmet>
+      {/* 1. SEO meta */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="robots" content="index, follow"/>
+      <meta name="robots" content="index, follow" />
       <link rel="canonical" href={canonicalUrl} />
-      <script type="application/ld+json">{JSON.stringify(schema)}</script>
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <script type="text/javascript">
-    {`
-      if (window.location.search.includes("no-track")) {
-        localStorage.setItem("skipAnalytics", "true");
-      }
 
-      if (localStorage.getItem("skipAnalytics") !== "true") {
-        const cfScript = document.createElement("script");
-        cfScript.defer = true;
-        cfScript.src = "https://static.cloudflareinsights.com/beacon.min.js";
-        cfScript.setAttribute("data-cf-beacon", '{"token": "7409e335e20240efa07f1bd360e11f9f"}');
-        document.head.appendChild(cfScript);
-      }
-    `}
-  </script>
+      {/* 2. Structured data */}
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+
+      {/* 3. Google AdSense Script */}
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-6771362188294710"
+        crossOrigin="anonymous"
+      ></script>
+
+      {/* 4. Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+      {/* 5. Cloudflare beacon script */}
+      <script type="text/javascript">
+        {`
+          if (window.location.search.includes("no-track")) {
+            localStorage.setItem("skipAnalytics", "true");
+          }
+
+          if (localStorage.getItem("skipAnalytics") !== "true") {
+            const cfScript = document.createElement("script");
+            cfScript.defer = true;
+            cfScript.src = "https://static.cloudflareinsights.com/beacon.min.js";
+            cfScript.setAttribute("data-cf-beacon", '{"token": "7409e335e20240efa07f1bd360e11f9f"}');
+            document.head.appendChild(cfScript);
+          }
+        `}
+      </script>
     </Helmet>
   );
 }

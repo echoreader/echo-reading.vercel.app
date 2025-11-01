@@ -8,7 +8,7 @@ description: "Discover the top environmental law schools that equip you with the
 What is environmental law?
 --------------------------
 
-[Environmental law](https://wealthhustle.blog) is the body of regulations, treaties, and legal principles that protect natural resources and ecosystems. It addresses issues like climate change, pollution control, and conservation balancing human activity with the planet’s long-term sustainability.
+Environmental law is the body of regulations, treaties, and legal principles that protect natural resources and ecosystems. It addresses issues like climate change, pollution control, and conservation balancing human activity with the planet’s long-term sustainability.
 
 You know that feeling when you start researching something “just for a quick look” and suddenly you’ve got 12 tabs open, a notepad full of scribbles, and a mild obsession? That was me last week diving into **environmental law**. And wow there’s a lot more to it than I expected.
 

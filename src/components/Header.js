@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-//import { Link } from "gatsby";
 import { Link, useStaticQuery, graphql } from "gatsby"; // ← ditambah: ambil siteUrl
 import "../styles/global.css";
 

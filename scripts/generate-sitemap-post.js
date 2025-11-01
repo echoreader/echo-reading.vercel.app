@@ -21,24 +21,30 @@ try {
     console.warn("⚠️ No markdown files found in posts directory.");
   }
 
-  const urls = files.map(file => {
-    const content = fs.readFileSync(path.join(POSTS_DIR, file), "utf8");
-    const { data } = matter(content);
+  const urls = files
+    .map(file => {
+      const content = fs.readFileSync(path.join(POSTS_DIR, file), "utf8");
+      const { data } = matter(content);
 
-    const slug = data.slug || file.replace(/\.md$/, "");
-    const date = data.date || new Date().toISOString();
+      const slug = data.slug || file.replace(/\.md$/, "");
+      const date = new Date(data.date || new Date().toISOString());
 
-    return `
+      return {
+        slug,
+        date,
+        xml: `
   <url>
     <loc>${SITE_URL}/${slug}/</loc>
-    <lastmod>${new Date(date).toISOString()}</lastmod>
+    <lastmod>${date.toISOString()}</lastmod>
     <priority>0.8</priority>
-  </url>`;
-  });
+  </url>`
+      };
+    })
+    .sort((a, b) => b.date - a.date); // ✅ Sort by newest first
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.join("\n")}
+${urls.map(u => u.xml).join("\n")}
 </urlset>`;
 
   fs.writeFileSync(OUTPUT_PATH, xml.trim());
