@@ -21,14 +21,16 @@ export default function SEO({ title, description, pageType }) {
   const schema = generateSchema({ pageType, title, description, slug: location.pathname });
 
    // ✅ Inject AdSense script via useEffect
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-6771362188294710";
-    script.crossOrigin = "anonymous";
-    document.head.appendChild(script);
-  }, []);
-
+  if (typeof window !== "undefined") {
+    useEffect(() => {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-6771362188294710";
+      script.crossOrigin = "anonymous";
+      document.head.appendChild(script);
+    }, []);
+  }
+  
   return (
     <Helmet>
       {/* 1. SEO meta */}
